@@ -1,0 +1,9 @@
+<input type="number" [(ngModel)]="taskid" placeholder="Enter your Taskid" name="taskid">
+<select [(ngModel)]="taskstatus" name="taskstatus">
+
+    <option value="Open">open</option>
+    <option value="inprogress">inprogress</option>
+    <option value="done">done</option>
+
+</select>
+<button (click)="updateFields()">update details</button>

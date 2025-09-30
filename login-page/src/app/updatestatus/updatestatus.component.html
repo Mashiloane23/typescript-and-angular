@@ -1,0 +1,24 @@
+<div *ngIf="task">
+    <h2>Update Task Status:</h2>
+    <p><strong>Task Name :  </strong>{{task.taskname}}</p>
+    <p><strong>Description : </strong>{{task.description}}</p>
+
+    <label for="Status">select status:</label>
+    <select id="status" [(ngModel)]="selectedstatus">
+        <option *ngFor="let status of statuses" [value]="status">{{status}}</option>
+    </select>
+
+    <button (click)="updateStatus()">update</button>
+</div>
+
+
+<div *ngIf="">
+
+    <input type="number" [(ngModel)]="taskid" placeholder="Enter taskid " name="taskid">
+    <select [(ngModel)]="taskid" name="TaskStatus">
+        <option value="open">open</option>
+        <option value="inprogress">inprogress</option>
+        <option value="done">done</option>
+    </select>
+    <button (click)="updateStatus()">Update task</button>
+</div>

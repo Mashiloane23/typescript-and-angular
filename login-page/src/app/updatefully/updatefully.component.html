@@ -1,0 +1,26 @@
+<div class="update-form">
+    <h2>update task</h2>
+
+    <input type="number" [(ngModel)]="taskid" placeholder="Enter your Taskid" name="taskid" required />
+
+    <input type="taskname" [(ngModel)]="taskname" placeholder="Enter your taskname" name="taskname" required />
+
+    <input type="description" [(ngModel)]="description" placeholder="enter your description" name="description" required />
+
+    <select [(ngModel)]="taskstatus" name="taskstatus">
+        
+        <option value="open">open</option>
+        <option value="inprogress">inprogress</option>
+        <option value="done">done</option>
+
+    </select>
+    <div *ngIf="feedbackmessage" [ngClass]="{'error':isError,'success':!isError}" class="feedbackmessage">
+
+        {{feedbackmessage}}
+    </div>
+
+
+    <button (click)="updateTask()">update Task</button>
+</div>
+
+

@@ -1,0 +1,59 @@
+.getTask-Container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #3f51b5;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #303f9f;
+  }
+  
+  .task-details {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: left;
+  }
+  
+  .task-details p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .no-task-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  

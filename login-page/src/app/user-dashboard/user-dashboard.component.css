@@ -1,0 +1,98 @@
+/* Styling for the header bar */
+.header-bar {
+  background-color: #2196f3; /* Blue background */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  width: 100%;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button{
+  background-color: #d30f0f; /* Red color */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.header-bar h1{
+  text-align: center;
+}
+
+/* Styling for the heading */
+.header-bar h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Styling for the logout button */
+.logout-btn {
+  background-color: #d30f0f; /* Red color */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #a30c0c;
+}
+
+/* Styling for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td {
+  background-color: #fff;
+}
+
+/* Styling for task status */
+span.open {
+  background-color: #ffcc00;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+span.in-progress {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+span.completed {
+  background-color: #2196f3;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Styling for clickable task name */
+.taskname {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}

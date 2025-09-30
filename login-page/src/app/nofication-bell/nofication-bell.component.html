@@ -1,0 +1,10 @@
+<div class="notification-bell" (click)="fetchnotification()">
+  🔔
+  <span class="badge" *ngIf="unread > 0">{{unread}}</span>
+</div>
+
+<div class="dropdown" *ngIf="notification.length > 0">
+  <ul>
+    <li *ngFor="let note of notification">{{ note.message }}</li>
+  </ul>
+</div>

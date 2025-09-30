@@ -1,0 +1,59 @@
+
+<div class="update-task-container">
+  <h2>Update Task</h2>
+
+  <!-- Button to toggle the visibility of task update section -->
+  <button (click)="togglesearch()" *ngIf="!showtogglesearch">Update Task</button>
+
+  <!-- Task ID Search Section -->
+  <div *ngIf="showtogglesearch">
+    <input type="number" [(ngModel)]="task.taskid" placeholder="Enter Task ID" />
+    <button (click)="searchTask()">Search</button>
+    <button (click)="cancelUpdate()">Cancel</button>
+  </div>
+
+  <!-- Display message or error -->
+  <div *ngIf="message" class="message">{{ message }}</div>
+
+ 
+  <div *ngIf="taskfound">
+    <h3>Task Details</h3>
+
+    <label for="taskname">Task Name:</label>
+    <input
+      id="taskname"
+      type="text"
+      [(ngModel)]="task.taskname"
+      placeholder="Enter task name"
+    />
+
+    <label for="description">Description:</label>
+    <textarea
+      id="description"
+      [(ngModel)]="task.description"
+      placeholder="Enter task description"
+    ></textarea>
+
+    <label for="taskstatus">Task Status:</label>
+    <select id="taskstatus" [(ngModel)]="task.taskstatus">
+      <option *ngFor="let status of taskstatusOptions" [value]="status">
+        {{ status }}
+      </option>
+    </select>
+
+    <!-- Submit button to update task -->
+    <button (click)="onSubmit()">Update Task</button>
+  </div>
+
+  <!-- Form Reset Section if no task is found -->
+  <div *ngIf="!taskfound && task.taskid">
+    <p>No task found with this ID. Please try again.</p>
+  </div>
+  <div *ngIf="taskupdated != null">
+    <p *ngIf="taskupdated" style="color: green;">Task successfully updated.</p>
+    <p *ngIf="!taskupdated" style="color: red;">Couldn't Update task</p>
+  </div>
+</div>
+
+
+

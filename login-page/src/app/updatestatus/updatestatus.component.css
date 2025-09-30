@@ -1,0 +1,13 @@
+button{
+    background-color: azure;
+    color:black;
+    padding: 5px 10px;
+    border-radius: 7.5 px;
+    position: absolute;
+
+}
+
+h2{
+ text-align: left;
+ margin: auto;   
+}

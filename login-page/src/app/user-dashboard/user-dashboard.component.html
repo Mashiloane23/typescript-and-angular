@@ -1,0 +1,46 @@
+<div class="dashboard-container">
+  
+  <div class="header-bar">
+   <h1>Welcome to User Dashboard</h1>
+ 
+   <button (click)="logout()">Logout</button>
+  </div>
+
+  <span class="spacer"></span>
+
+      
+  <button mat-icon-button matBadge="3" matBadgeColor="warn" matBadgePosition="above after">
+    <mat-icon>notifications</mat-icon>
+  </button>
+ 
+ <router-outlet></router-outlet>
+ 
+ <!-- Display the tasks if available, otherwise show a message -->
+ <div *ngIf="tasks.length > 0; else noTasks">
+   <h3>Your Assigned Tasks</h3>
+   <table>
+     <thead>
+       <tr>
+         <th>Task Name</th>
+         <th>Description</th>
+         <th>Status</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor="let task of tasks">
+         <td>
+           <a (click)="navigateToUpdate(task.taskid)" class="taskname">{{task.taskname}}</a>
+         </td>
+         <td>{{task.description}}</td>
+         <td>{{task.taskstatus}}</td>
+       </tr>
+     </tbody>
+   </table>
+ </div>
+ 
+ <!-- Show message if no tasks assigned -->
+ <ng-template #noTasks>
+   <p>No tasks assigned to you.</p>
+ </ng-template>
+ 
+ </div>

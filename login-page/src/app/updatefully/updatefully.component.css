@@ -1,0 +1,53 @@
+.update-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .update-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .update-form input,
+  .update-form select,
+  .update-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .update-form input:focus,
+  .update-form select:focus {
+    border-color: #4a90e2;
+    outline: none;
+  }
+  
+  .update-form button {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .update-form button:hover {
+    background-color: #357ab8;
+  }
+  .error{
+    color: red;
+    font-weight: bold;
+  }
+
+  .success{
+    color: green;
+    font-weight: bold;
+  }

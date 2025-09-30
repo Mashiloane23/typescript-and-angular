@@ -1,0 +1,22 @@
+.big-button {
+  display: block;  /* Makes it a block element */
+  width: 100%;  /* Full width */
+  max-width: 450px;  /* Limit max width */
+  margin: 40px auto;  /* Centering */
+  padding: 25px 50px;  /* Bigger padding */
+  font-size: 24px;  /* Bigger text */
+  font-weight: bold;  /* Bold text */
+  text-transform: uppercase;  /* Capitalized text */
+  border-radius: 10px;  /* Rounded edges */
+  border: none;  /* Remove default border */
+  background-color: #1976D2 !important;  /* Blue color */
+  color: white !important;  /* White text */
+  cursor: pointer;  /* Clickable */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);  /* Subtle shadow */
+  transition: all 0.3s ease-in-out;  /* Smooth hover effect */
+}
+
+.big-button:hover {
+  background-color: #135ba1 !important;  /* Darker blue on hover */
+  transform: scale(1.08);  /* Slight zoom */
+}

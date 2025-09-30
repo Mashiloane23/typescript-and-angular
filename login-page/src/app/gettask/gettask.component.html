@@ -1,0 +1,28 @@
+
+<div class="getTask-Container">
+  <h2>Search Task by ID</h2>
+  
+  <button (click)="toglesearchInput()" *ngIf="!showsearchInput">Search Task</button>
+
+ 
+
+ 
+  <div *ngIf="showsearchInput">
+    <input type="number" [(ngModel)]="taskid" placeholder="Enter Task ID" />
+    <button (click)="getTaskByID()">Search</button>
+  </div>
+
+  <!-- Task details displayed if task is found -->
+  <div class="task-details" *ngIf="task">
+    <h3>Task Details:</h3>
+    <p><strong>ID:</strong> {{ task.taskid }}</p>
+    <p><strong>Name:</strong> {{ task.taskname }}</p>
+    <p><strong>Description:</strong> {{ task.description }}</p>
+    <p><strong>Status:</strong> {{ task.TaskStatus }}</p>
+    <p><strong>Start Date:</strong> {{ task.startdate }}</p>
+    <p><strong>Last Modified:</strong> {{ task.lastModified || 'N/A' }}</p>
+  </div>
+
+  <!-- Error message if no task is found -->
+  <p class="no-task-message" *ngIf="task === null && taskid">No task found.</p>
+</div>

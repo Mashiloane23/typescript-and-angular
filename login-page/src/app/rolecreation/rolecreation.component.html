@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>soft delete role:</h2>
+    <label for="roleid">Enter roleID</label>
+    <input type="number" id="roleid" [(ngModel)]="roleid" placeholder="Enter your roleid">
+    <button (click)="softdeleterole()">soft delete role</button>
+
+    
+
+      <div *ngIf="isSodtdeletd != null">
+        <p *ngIf="isSodtdeletd" style="color: green;">role successfully softdeleted</p>
+        <p *ngIf="!isSodtdeletd" style="color: red;">couldn't softdelete the role</p>
+      </div> 
+</div>
+
+
+

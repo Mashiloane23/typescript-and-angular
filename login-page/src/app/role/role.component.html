@@ -1,0 +1,32 @@
+<div>
+    <h2>Create Role</h2>
+    <form (ngSubmit)="createrole()">
+      <div>
+        <label for="rolename">Role Name:</label>
+        <input type="text" id="rolename" [(ngModel)]="rolename" name="rolename" required />
+      </div>
+  
+      <div>
+        <label for="roleType">Role Type:</label>
+        <select id="roleType" [(ngModel)]="roleType" name="roleType" required>
+          <option value="">Select Type</option>
+          <option value="system">System</option>
+          <option value="application">Application</option>
+        </select>
+      </div>
+  
+      <div>
+        <label for="description">Description:</label>
+        <textarea id="description" [(ngModel)]="description" name="description"></textarea>
+      </div>
+  
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+<div *ngIf="successmessage" class="success-message">
+    {{successmessage}}
+</div>
+<div *ngIf="errormessage" class="error-message">
+    {{errormessage}}
+</div>

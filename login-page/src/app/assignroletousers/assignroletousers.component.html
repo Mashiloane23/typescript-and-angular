@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Assign Task to User</h2>
+    <form (ngSubmit)="assignTask()">
+      <div class="form-group">
+        <label for="taskid">Task ID:</label>
+        <input type="number" id="taskid" [(ngModel)]="taskid" name="taskid" class="form-control" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="userid">User ID(s) (comma-separated):</label>
+        <input type="text" id="userid" [(ngModel)]="userid" name="userid" class="form-control" required />
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Assign Task</button> 
+
+      
+    </form>
+
+    <div *ngIf="TaskAssigned != null">
+      <p *ngIf="TaskAssigned" style="color: green;"> Task assigned successfully</p>
+      <p *ngIf="!TaskAssigned" style="color: red;">Error in assisgning task</p>
+    </div> 
+  </div>
+  
+
+  

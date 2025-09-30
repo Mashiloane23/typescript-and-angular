@@ -1,0 +1,112 @@
+
+<div class="top-bar"></div>
+
+
+
+<mat-toolbar class="toolbar">
+
+
+
+    
+    
+      
+
+<mat-menu #menu="matMenu">
+  <!-- <button mat-menu-item (click)="toggleSearchTask()">search Task</button> -->
+  <button mat-menu-item (click)="toggleupdate()">UPDATE Task</button>
+  <button mat-menu-item (click)="toggletodelete()">Delete Task</button>
+  <button mat-menu-item (click)="togglesearch()">Search Task</button>
+  <button mat-menu-item (click)="createTaskToggle()">createTask</button>
+  <button mat-menu-item (click)="toggleforassigningTaskAUser()">AssignTaskToUser</button>
+  <!-- <button mat-menu-item (click)="toggleForupdate()">update</button> -->
+  <button mat-menu-item (click)="toggleforupdatedescription()">update description</button>
+  <button mat-menu-item (click)="togglrforupdatetaskname()">update taskname</button>
+  <button mat-menu-item (click)="toggleforfullupdate()">update Task</button>
+</mat-menu>
+
+<mat-toolbar class="toolbar">
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="toolbar-title">Task Management</span>
+  <span class="welcome-message">Welcome, {{ role }}!</span>
+
+    <div class="notification-container" (click)="toggleNotification()">
+  🔔
+  <span class="notification-badge" *ngIf="notifications.length > 0">{{ notifications.length }}</span>
+</div>
+
+
+  <button mat-button class="logout-button" (click)="logout()">Logout</button>
+</mat-toolbar>
+
+
+
+
+    
+    
+    
+  </mat-toolbar>
+
+ 
+
+
+  
+
+  <div *ngIf="showtoggleupdate">
+    <app-update></app-update>
+  </div>
+
+  <div *ngIf="showtoggleupdate">
+    <button mat-button (click)="toggleupdate()">Cancel</button>
+  </div>
+
+  <div *ngIf="showtoggledelete">
+    <app-delete-task></app-delete-task>
+    <button mat-button (click)="toggletodelete()">Cancel</button>
+  </div>
+
+  <div *ngIf="showtogglecreate">
+    <app-create-task></app-create-task>
+    <button mat-button (click)="createTaskToggle()">Cancel</button>
+  </div>
+
+  <div *ngIf="showtogglesearch">
+    <app-gettask></app-gettask>
+    <button mat-button (click)="togglesearch()">Cancel</button>
+  </div>
+  
+  <div *ngIf="showtoggleforassihninguserstask">
+    <app-assignroletousers></app-assignroletousers>
+    <button mat-button (click)="toggleforassigningTaskAUser()">Cancel</button>
+  </div>
+
+  <div *ngIf="showtoggleforsoftdelete">
+    <app-rolecreation></app-rolecreation>
+    <button mat-button (click)="toggleforsoftdelete()">Cancel</button>
+  </div>
+
+ 
+
+  <div *ngIf="showtoggleupdatetaskstatus">
+    <app-taskcred></app-taskcred>
+    <button mat-button (click)="toggleforupdatestatus()">Cancel</button>
+  </div>
+
+  <div *ngIf="showtoggleUpdatedescription">
+    <app-updatetaskdescription></app-updatetaskdescription>
+    <button mat-button (click)="toggleforupdatedescription()">Cancel</button>
+  </div>
+
+  <div *ngIf="showtoggleforupdatetaskname">
+    <app-updatetaskstatus></app-updatetaskstatus>
+    <button mat-button (click)="togglrforupdatetaskname()">Cancel</button>
+  </div>
+
+  <div *ngIf="showtogglrforfullupdate">
+    <app-updatefully></app-updatefully>
+    <button mat-button (click)="toggleforfullupdate()">Cancel</button>
+  </div>
+
+  
+ 

@@ -1,0 +1,21 @@
+<div>
+    <h3>Delete Task by Task ID</h3>
+    
+    <!-- Input for Task ID -->
+    <label for="taskid">Task ID:</label>
+    <input 
+      type="number" 
+      [(ngModel)]="TaskIdTodelete" 
+      placeholder="Enter Task ID" 
+      id="taskid" 
+    />
+    
+    <!-- Button to trigger deleteTask() method -->
+    <button (click)="DeleteTask()">Delete Task</button>
+  
+    <!-- Success or Error Messages -->
+    <div *ngIf="isDeleted !== null">
+      <p *ngIf="isDeleted" style="color: green;">Task successfully deleted.</p>
+      <p *ngIf="!isDeleted" style="color: red;">Error: Task not deleted.</p>
+    </div>
+</div>
