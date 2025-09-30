@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nestjs-app:
+    build:
+      context: .
+      dockerfile: src/Dockerfile  # Adjust this path based on your file location
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=host.docker.internal
+      - DB_PORT=5432
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=Mashiloane12@
+      - DB_DATABASE=task-management
